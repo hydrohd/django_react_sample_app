@@ -25,7 +25,6 @@ class Quiz(models.Model):
 class Question(models.Model):
     quiz = models.ForeignKey(Quiz, related_name='questions', on_delete=models.CASCADE) 
     title = models.CharField(max_length=255, default='')
-    is_right = models.BooleanField(default=False, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True) 
 
@@ -41,6 +40,7 @@ class Question(models.Model):
 class Answer(models.Model):
     question = models.ForeignKey(Question, related_name='questions', on_delete=models.CASCADE) 
     answer_text = models.CharField(max_length=255, null=True, blank=True)
+    is_right = models.BooleanField(default=False, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True) 
     
