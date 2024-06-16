@@ -18,5 +18,5 @@ class AnswerAdmin(admin.ModelAdmin):
     list_display = ['answer_text', 'is_right', 'question']
 
 admin.site.register(Quiz, QuizAdmin)
-admin.site.register(Question)
-admin.site.register(Answer)
+admin.site.register(Question, QuestionAdmin)
+admin.site.register(Answer, AnswerAdmin)
