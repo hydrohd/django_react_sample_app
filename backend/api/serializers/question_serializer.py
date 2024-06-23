@@ -1,38 +1,15 @@
 from rest_framework import serializers
-from .models import Answer, Question, Quiz
-
-class QuizSerializer(serializers.ModelSerializer):
-    question_count = serializers.SerializerMethodField("get_question_count")
-
-    class Meta:
-        model = Quiz
-        field = [
-            'id',
-            'title',
-            'created_at',
-            'question_count'
-        ]
-
-    def get_question_count(self, obj):
-        return obj.question_count
-    
-
-class AnswerSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Answer
-        field = [
-            'id',
-            'answer_text',
-            'is_right'
-        ]
+from api.models import Question, Answer
+from api.serializers.quiz_serializer import QuizSerializer
+from api.serializers.answer_serializer import AnswerSerializer
 
 class QuestionSerializer(serializers.ModelSerializer):
     quiz = QuizSerializer(read_only = True)
     answers = AnswerSerializer(many = True)
+    
     class Meta:
         model = Question
-        field = [
+        fields = [
             'id',
             'quiz',
             'title',
