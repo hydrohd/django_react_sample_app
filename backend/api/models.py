@@ -38,7 +38,7 @@ class Question(models.Model):
         return self.title
     
 class Answer(models.Model):
-    question = models.ForeignKey(Question, related_name='questions', on_delete=models.CASCADE) 
+    question = models.ForeignKey(Question, related_name='answers', on_delete=models.CASCADE) 
     answer_text = models.CharField(max_length=255, null=True, blank=True)
     is_right = models.BooleanField(default=False, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
