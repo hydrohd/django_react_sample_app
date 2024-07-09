@@ -4,11 +4,22 @@ export default {
         "./index.html",
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
+
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                body: ['Fira Code']
+            }
+        },
     },
+
     plugins: [
+        require("@tailwindcss/typography"),
         require('daisyui'),
     ],
+
+    daisyui: {
+        themes: ["dracula"]
+    },
 }
 
