@@ -26,7 +26,7 @@ function App() {
                                 Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                                 quasi. In deleniti eaque aut repudiandae et a id nisi.
                             </p>
-                            <button className="btn btn-primary font-body">Get Started</button>
+                            <button className="btn btn-outline btn-primary font-body">Get Started</button>
                         </div>
                     </div>
 
