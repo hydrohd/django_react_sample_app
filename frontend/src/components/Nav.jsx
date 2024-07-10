@@ -1,16 +1,16 @@
 import UnderScoreSpring from "./Cursor"
-
+import { Link } from "react-router-dom"
 function Nav() {
     return (
         <nav className="navbar bg-base-100 opacity-75">
             <div className="navbar-start">
 
                 <div className="flex-1">
-                    <a className="btn btn-ghost text-xl font-body">
+                    <Link className="btn btn-ghost text-xl font-body" to="/">
                         Keeb Quiz
                         <UnderScoreSpring></UnderScoreSpring>
 
-                    </a>
+                    </Link>
                 </div>
             </div>
 
@@ -18,8 +18,8 @@ function Nav() {
                 <ul
                     tabindex="0"
                     class="menu menu-horizontal">
-                    <li className="px-4"><a className="active">Home</a></li>
-                    <li><a>Quizzes</a></li>
+                    <li className="px-4"><Link to="/">Home</Link></li>
+                    <li><Link to="/quizzes">Quizzes</Link></li>
                 </ul>
             </div>
 
