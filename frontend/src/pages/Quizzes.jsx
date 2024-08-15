@@ -9,7 +9,7 @@ function Quizzes() {
 
                 <div className="flex justify-center py-6">
 
-                    <div className="border-2 border-secondary rounded-b-lg p-2">
+                    <div className="border-2 border-secondary rounded-b-lg p-2 hover:border-primary hover:border-dotted">
                         <h1 className="text-5xl font-bold font-body">Active Quizzes</h1>
                     </div>
 
