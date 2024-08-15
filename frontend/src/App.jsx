@@ -9,11 +9,11 @@ import { Route, Routes } from 'react-router-dom'
 function App() {
     return (
         <>
-            <header className='fixed top-0 w-full backdrop-blur-sm border-t-2 border-primary'>
+            <header className='fixed top-0 w-full z-50 backdrop-blur-sm border-t-2 border-primary'>
                 <Nav />
             </header>
             
-            <main>
+            <main className=''>
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/quizzes' element={<Quizzes />} />

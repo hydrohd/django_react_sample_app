@@ -1,9 +1,11 @@
+import keeb from './../assets/images/keeb.jpeg'
+
 function Home() {
     return (
         <div
             className="hero min-h-screen"
             style={{
-                backgroundImage: "url(https://i.imgur.com/lDb3gOZ.jpeg)",
+                backgroundImage: `url(${keeb})`,
             }}>
 
             <div className="hero-overlay bg-opacity-60"></div>
