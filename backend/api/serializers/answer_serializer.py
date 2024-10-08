@@ -11,4 +11,3 @@ class AnswerSerializer(serializers.ModelSerializer):
             'answer_text',
             'is_right'
         ]
-
