@@ -30,6 +30,6 @@ urlpatterns = [
     path("quiz/<int:quiz_id>", RetrieveUpdateDestroyQuiz.as_view(), name = "quiz_detail"),
     path("answer/", ListCreateAnswer.as_view(), name = 'answer_list'),
     path("answer/<int:answer_id>", RetrieveUpdateDestroyAnswer.as_view(), name = "answer_detail"),
-    path("question/<int:pk>", ListCreateQuestion.as_view(), name = "question_list"),
+    path("question/", ListCreateQuestion.as_view(), name = "question_list"),
     path("question/<int:question_id>", RetrieveUpdateDestroyQuestion.as_view(), name = "question_detail")
 ]
